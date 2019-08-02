@@ -41,29 +41,32 @@ function getConcert () {
     var artist = actionTwo;
     var bandsQueryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
 
-
-
     axios.get(bandsQueryUrl).then(function(response) {
         console.log (
             "Artist: " + artist + "\nVenue: " + response.data[0].venue.name + "\nLocation: " + response.data[0].venue.city + ", " + response.data[0].venue.region + ", " + response.data[0].venue.country + "\nDate: " + moment(response.data[0].datetime).format("MM/DD/YYYY")
         );
     })
+}
 
-// * Name of the venue
-// * Venue location
-// * Date of the Event (use moment to format this as "MM/DD/YYYY")
+// #2 Spotify
+function getSong () {
+    var song = actionTwo;
+}
 
+// #3 OMDB
+function getMovie () {
+    var movie = actionTwo;
+    var omdbQueryUrl = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy"
+
+    axios.get(omdbQueryUrl).then(function(response) {
+        console.log(
+            "Title: " + movie + "\nYear: " + response.data.Year + "\nIMDB Rating: " + response.data.imdbRating + "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value + "\nCountry Produced: " + response.data.Country + "\nLanguage: " + response.data.Language + "\nPlot: " + response.data.Plot + "\nActors: " + response.data.Actors
+        );
+    });
 }
 
 
 
-
-
-
-// #2 Spotify
-
-
-// #3 OMDB
 
 
 // #4 Do What It Says
