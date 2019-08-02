@@ -60,7 +60,7 @@ function getConcert () {
 function getSong () {
     var song = actionTwo;
 
-    if (song = " ") {
+    if (!song) {
         song = "I Saw the Sign";
         // How to make this by Ace of Base?
     }
@@ -83,10 +83,15 @@ function getMovie () {
     var movie = actionTwo;
     var omdbQueryUrl = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy"
 
+    if (!movie) {
+        movie = "Mr. Nobody";
+        // Not Working. Need to work on more.
+    }
+
     axios.get(omdbQueryUrl).then(function(response) {
         console.log(
             "----------------------------------------------" + 
-            "Title: " + movie + 
+            "\nTitle: " + movie + 
             "\nYear: " + response.data.Year + 
             "\nIMDB Rating: " + response.data.imdbRating + 
             "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value + 
