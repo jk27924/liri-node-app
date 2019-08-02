@@ -51,6 +51,17 @@ function getConcert () {
 // #2 Spotify
 function getSong () {
     var song = actionTwo;
+
+    spotify.search({ type: 'track', query: song }).then(function(response) {
+        console.log (
+            "\n----------------------------------------------" + 
+            "\nArtist(s): " + response.tracks.items[0].album.artists[0].name +
+            "\nSong: " + response.tracks.items[0].name +
+            "\nSpotify Link: " + response.tracks.items[0].external_urls.spotify +
+            "\nAlbum: " + response.tracks.items[0].album.name +
+            "\n----------------------------------------------"
+        );
+    });
 }
 
 // #3 OMDB
@@ -65,14 +76,16 @@ function getMovie () {
     });
 }
 
-
-
-
-
 // #4 Do What It Says
+function doWhatItSays () {
+    fs.readFile("random.txt", "utf-8", function(error,data) {
 
-
-
-
-
-
+        if (error) {
+            return console.log(red(error));
+        } else {
+            var output = data.split(", ");
+            getSong(txt[1]);
+            console.log(output);
+        }
+    });
+}
