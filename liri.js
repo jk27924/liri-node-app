@@ -115,12 +115,11 @@ function getSong () {
 function getMovie () {
     var movie = actionTwo;
 
-    var omdbQueryUrl = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy"
-
     if (!movie) {
         movie = "Mr Nobody";
     }
 
+    var omdbQueryUrl = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy"
 
 
     axios.get(omdbQueryUrl).then(function(response) {
