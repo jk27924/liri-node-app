@@ -21,7 +21,7 @@ var actionTwo = process.argv.slice(3).join(" ");
 
 
 
-// function switchAction() {
+function switchAction() {
     switch (action) {
         case "concert-this":
         getConcert();
@@ -39,7 +39,8 @@ var actionTwo = process.argv.slice(3).join(" ");
         doWhatItSays();
         break;
     }
-// }
+}
+
 
 
 // #1 concert-this _ Bands in Town
@@ -61,7 +62,7 @@ function getConcert () {
 
         var logText =
         "\n--------------------------------------------------------" + 
-        "\nYOUR REQUESTED |CONCERT| INFORMATION! ENJOY ^_^" +
+        "\nYOUR REQUESTED | CONCERT | INFORMATION! ENJOY ^_^" +
         "\n<<-- Search Request on: " + currentMoment + " -->>" +          
         "\nArtist: " + artist + 
         "\nVenue: " + response.data[0].venue.name + 
@@ -79,11 +80,12 @@ function getSong () {
     var song = actionTwo;
 
     if (!song) {
-        song = "I Saw the Sign";
-        // How to make this by Ace of Base?
+        song = "The Sign Ace of Base";
     }
 
     spotify.search({ type: 'track', query: song }).then(function(response) {
+        
+        
         console.log (
             "\n----------------------------------------------" + 
             "\nArtist(s): " + response.tracks.items[0].album.artists[0].name +
@@ -97,7 +99,7 @@ function getSong () {
 
         var logText =
         "\n--------------------------------------------------------" + 
-        "\nYOUR REQUESTED |SONG| INFORMATION! ENJOY ^_^" + 
+        "\nYOUR REQUESTED | SONG | INFORMATION! ENJOY ^_^" + 
         "\n<<-- Search Request on: " + currentMoment + " -->>" +               "\nArtist(s): " + response.tracks.items[0].album.artists[0].name +
         "\nSong: " + response.tracks.items[0].name +
         "\nSpotify Link: " + response.tracks.items[0].external_urls.spotify +
@@ -137,7 +139,7 @@ function getMovie () {
 
         var logText =
         "\n--------------------------------------------------------" + 
-        "\nYOUR REQUESTED |MOVIE| INFO! ENJOY ^_^" +            
+        "\nYOUR REQUESTED | MOVIE | INFO! ENJOY ^_^" +            
         "\n<<-- Search Request on: " + currentMoment + " -->>" +          
         "\nTitle: " + movie + 
         "\nYear: " + response.data.Year + 
@@ -160,9 +162,21 @@ function doWhatItSays () {
 
         if (error) {
             return console.log(error);
-        } else { 
-            var output = data.split(", ");
-            console.log(output);
         }
+
+        console.log(data);
+
+        var output = data.split(", ");
+
+        console.log (output);
+
+        action = output[0];
+        process.argv[3] = output[1];
+        console.log(action);
+        console.log(output[1]);
+
+        switchAction();
     });
 }
+
+switchAction();
