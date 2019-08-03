@@ -4,18 +4,22 @@ var keys = require("./keys.js");
 
 var axios = require("axios");
 
-var bandsintown = require('bandsintown')("106ad69002bde46c02cdebb861ad5e84");
+var bandsintown = require("bandsintown")("106ad69002bde46c02cdebb861ad5e84");
 var moment = require("moment");
 
-var Spotify = require('node-spotify-api');
+var Spotify = require("node-spotify-api");
 var spotify = new Spotify(keys.spotify);
 
-var OmdbApi = require('omdb-api-pt')
+var OmdbApi = require("omdb-api-pt")
 
-var fs = require('fs');
+var fs = require("fs");
+
+
 
 var action = process.argv [2];
 var actionTwo = process.argv.slice(3).join(" ");
+
+
 
 // function switchAction() {
     switch (action) {
@@ -38,7 +42,7 @@ var actionTwo = process.argv.slice(3).join(" ");
 // }
 
 
-// #1 Bands in Town
+// #1 concert-this _ Bands in Town
 function getConcert () {
     var artist = actionTwo;
     var bandsQueryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
@@ -46,17 +50,27 @@ function getConcert () {
     axios.get(bandsQueryUrl).then(function(response) {
         console.log (
             "----------------------------------------------" + 
-            "Artist: " + artist + 
+            "\nArtist: " + artist + 
             "\nVenue: " + response.data[0].venue.name + 
             "\nLocation: " + response.data[0].venue.city + ", " + response.data[0].venue.region + ", " + response.data[0].venue.country + 
             "\nDate: " + moment(response.data[0].datetime).format("MM/DD/YYYY") +
             "\n----------------------------------------------"
         );
+
+        var logText =
+        "\nYOUR REQUESTED |CONCERT| INFORMATION! ENJOY ^_^" +            
+        "\nArtist: " + artist + 
+        "\nVenue: " + response.data[0].venue.name + 
+        "\nLocation: " + response.data[0].venue.city + ", " + response.data[0].venue.region + ", " + response.data[0].venue.country + 
+        "\nDate: " + moment(response.data[0].datetime).format("MM/DD/YYYY") +
+        "\n----------------------------------------------";
+
+        fs.appendFile("log.txt", logText, function (){});
     })
 }
 
 
-// #2 Spotify
+// #2 spotify-this-song _ Spotify
 function getSong () {
     var song = actionTwo;
 
@@ -74,11 +88,21 @@ function getSong () {
             "\nAlbum: " + response.tracks.items[0].album.name +
             "\n----------------------------------------------"
         );
+
+        var logText =
+        "\nYOUR REQUESTED |SONG| INFORMATION! ENJOY ^_^" +            
+        "\nArtist(s): " + response.tracks.items[0].album.artists[0].name +
+        "\nSong: " + response.tracks.items[0].name +
+        "\nSpotify Link: " + response.tracks.items[0].external_urls.spotify +
+        "\nAlbum: " + response.tracks.items[0].album.name +
+        "\n----------------------------------------------"
+
+        fs.appendFile("log.txt", logText, function (){});
     });
 }
 
 
-// #3 OMDB
+// #3 movie-this _ OMDB
 function getMovie () {
     var movie = actionTwo;
     var omdbQueryUrl = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy"
@@ -98,22 +122,35 @@ function getMovie () {
             "\nCountry Produced: " + response.data.Country + 
             "\nLanguage: " + response.data.Language + 
             "\nPlot: " + response.data.Plot + 
-            "\nActors: " + response.data.Actors +
+            "\nActors: " + response.data.Actors + 
             "\n----------------------------------------------"
         );
+
+        var logText =
+        "\nYOUR REQUESTED |MOVIE| INFO! ENJOY ^_^" +            
+        "\nTitle: " + movie + 
+        "\nYear: " + response.data.Year + 
+        "\nIMDB Rating: " + response.data.imdbRating + 
+        "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value + 
+        "\nCountry Produced: " + response.data.Country + 
+        "\nLanguage: " + response.data.Language + 
+        "\nPlot: " + response.data.Plot + 
+        "\nActors: " + response.data.Actors + 
+        "\n----------------------------------------------"
+
+        fs.appendFile("log.txt", logText, function (){});
     });
 }
 
 
-// #4 Do What It Says
+// #4 do-what-it-says _ random.txt
 function doWhatItSays () {
     fs.readFile("random.txt", "utf-8", function(error,data) {
 
         if (error) {
             return console.log(error);
-        } else {
+        } else { 
             var output = data.split(", ");
-            getSong(txt[1]);
             console.log(output);
         }
     });
