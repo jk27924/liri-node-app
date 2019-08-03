@@ -1,39 +1,23 @@
 
-Requested Concert Information for You! ENJOY ^_^
-Artist: bonjovi
-Venue: ESTADIO NACIONAL DEL PERÚ
-Location: Lima, , Peru
-Date: 10/02/2019
-----------------------------------------------
-Requested Concert Information for You! ENJOY ^_^
+--------------------------------------------------------
+YOUR REQUESTED |CONCERT| INFORMATION! ENJOY ^_^
+<<-- Search Request on: August 2nd 2019, 8:04:40 pm -->>
+Artist: chris brown
+Venue: INDIGOAT TOUR
+Location: Portland, OR, United States
+Date: 08/20/2019
+--------------------------------------------------------
+--------------------------------------------------------
+YOUR REQUESTED |CONCERT| INFORMATION! ENJOY ^_^
+<<-- Search Request on: August 2nd 2019, 8:05:00 pm -->>
 Artist: blink 182
 Venue: blink-182 & Lil Wayne Tour 2019
 Location: El Paso, TX, United States
 Date: 08/04/2019
-----------------------------------------------
-Your Requested |CONCERT| Information! ENJOY ^_^
-Artist: blink 182
-Venue: blink-182 & Lil Wayne Tour 2019
-Location: El Paso, TX, United States
-Date: 08/04/2019
-----------------------------------------------
-Your Requested |SONG| Information! ENJOY ^_^
-Artist(s): Various Artists
-Song: I Saw the Sign
-Spotify Link: https://open.spotify.com/track/2vAJzMPjMoTROtntmZoaIb
-Album: 80s 90s Music Dance Songs: Las Mejores Canciones, Éxitos Disco Y Música De Los 90 Y 80 Para Bailar
-----------------------------------------------
-Your Requested |MOVIE| Information! ENJOY ^_^
-Title: star wars
-Year: 1977
-IMDB Rating: 8.6
-Rotten Tomatoes Rating: 93%
-Country Produced: USA
-Language: English
-Plot: Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.
-Actors: Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing
-----------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
 YOUR REQUESTED |MOVIE| INFO! ENJOY ^_^
+<<-- Search Request on: August 2nd 2019, 8:06:17 pm -->>
 Title: iron man
 Year: 2008
 IMDB Rating: 7.9
@@ -42,34 +26,12 @@ Country Produced: USA
 Language: English, Persian, Urdu, Arabic, Hungarian
 Plot: After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.
 Actors: Robert Downey Jr., Terrence Howard, Jeff Bridges, Gwyneth Paltrow
-----------------------------------------------
-YOUR REQUESTED |MOVIE| INFO! ENJOY ^_^
-Title: iron man 2
-Year: 2010
-IMDB Rating: 7.0
-Rotten Tomatoes Rating: 74%
-Country Produced: USA
-Language: English, French, Russian
-Plot: With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.
-Actors: Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Scarlett Johansson
-----------------------------------------------
-YOUR REQUESTED |MOVIE| INFO! ENJOY ^_^
-Title: iron man 3
-Year: 2013
-IMDB Rating: 7.2
-Rotten Tomatoes Rating: 79%
-Country Produced: USA
-Language: English
-Plot: When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.
-Actors: Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Guy Pearce
-----------------------------------------------
-YOUR REQUESTED |MOVIE| INFO! ENJOY ^_^
-Title: avengers
-Year: 2012
-IMDB Rating: 8.1
-Rotten Tomatoes Rating: 92%
-Country Produced: USA
-Language: English, Russian, Hindi
-Plot: Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.
-Actors: Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth
-----------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+YOUR REQUESTED |SONG| INFORMATION! ENJOY ^_^
+<<-- Search Request on: August 2nd 2019, 8:08:02 pm -->>
+Artist(s): Various Artists
+Song: As Long As You Love Me
+Spotify Link: https://open.spotify.com/track/4hAG2RaTkWCPwmAbG0GY7i
+Album: 2012 Hits
+--------------------------------------------------------

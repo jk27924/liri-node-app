@@ -49,7 +49,7 @@ function getConcert () {
 
     axios.get(bandsQueryUrl).then(function(response) {
         console.log (
-            "----------------------------------------------" + 
+            "\n----------------------------------------------" + 
             "\nArtist: " + artist + 
             "\nVenue: " + response.data[0].venue.name + 
             "\nLocation: " + response.data[0].venue.city + ", " + response.data[0].venue.region + ", " + response.data[0].venue.country + 
@@ -57,13 +57,17 @@ function getConcert () {
             "\n----------------------------------------------"
         );
 
+        var currentMoment = moment().format("MMMM Do YYYY, h:mm:ss a");
+
         var logText =
-        "\nYOUR REQUESTED |CONCERT| INFORMATION! ENJOY ^_^" +            
+        "\n--------------------------------------------------------" + 
+        "\nYOUR REQUESTED |CONCERT| INFORMATION! ENJOY ^_^" +
+        "\n<<-- Search Request on: " + currentMoment + " -->>" +          
         "\nArtist: " + artist + 
         "\nVenue: " + response.data[0].venue.name + 
         "\nLocation: " + response.data[0].venue.city + ", " + response.data[0].venue.region + ", " + response.data[0].venue.country + 
         "\nDate: " + moment(response.data[0].datetime).format("MM/DD/YYYY") +
-        "\n----------------------------------------------";
+        "\n--------------------------------------------------------";
 
         fs.appendFile("log.txt", logText, function (){});
     })
@@ -81,7 +85,7 @@ function getSong () {
 
     spotify.search({ type: 'track', query: song }).then(function(response) {
         console.log (
-            "----------------------------------------------" + 
+            "\n----------------------------------------------" + 
             "\nArtist(s): " + response.tracks.items[0].album.artists[0].name +
             "\nSong: " + response.tracks.items[0].name +
             "\nSpotify Link: " + response.tracks.items[0].external_urls.spotify +
@@ -89,13 +93,16 @@ function getSong () {
             "\n----------------------------------------------"
         );
 
+        var currentMoment = moment().format("MMMM Do YYYY, h:mm:ss a");
+
         var logText =
-        "\nYOUR REQUESTED |SONG| INFORMATION! ENJOY ^_^" +            
-        "\nArtist(s): " + response.tracks.items[0].album.artists[0].name +
+        "\n--------------------------------------------------------" + 
+        "\nYOUR REQUESTED |SONG| INFORMATION! ENJOY ^_^" + 
+        "\n<<-- Search Request on: " + currentMoment + " -->>" +               "\nArtist(s): " + response.tracks.items[0].album.artists[0].name +
         "\nSong: " + response.tracks.items[0].name +
         "\nSpotify Link: " + response.tracks.items[0].external_urls.spotify +
         "\nAlbum: " + response.tracks.items[0].album.name +
-        "\n----------------------------------------------"
+        "\n--------------------------------------------------------"
 
         fs.appendFile("log.txt", logText, function (){});
     });
@@ -114,7 +121,7 @@ function getMovie () {
 
     axios.get(omdbQueryUrl).then(function(response) {
         console.log(
-            "----------------------------------------------" + 
+            "\n----------------------------------------------" + 
             "\nTitle: " + movie + 
             "\nYear: " + response.data.Year + 
             "\nIMDB Rating: " + response.data.imdbRating + 
@@ -126,8 +133,12 @@ function getMovie () {
             "\n----------------------------------------------"
         );
 
+        var currentMoment = moment().format("MMMM Do YYYY, h:mm:ss a");
+
         var logText =
+        "\n--------------------------------------------------------" + 
         "\nYOUR REQUESTED |MOVIE| INFO! ENJOY ^_^" +            
+        "\n<<-- Search Request on: " + currentMoment + " -->>" +          
         "\nTitle: " + movie + 
         "\nYear: " + response.data.Year + 
         "\nIMDB Rating: " + response.data.imdbRating + 
@@ -136,7 +147,7 @@ function getMovie () {
         "\nLanguage: " + response.data.Language + 
         "\nPlot: " + response.data.Plot + 
         "\nActors: " + response.data.Actors + 
-        "\n----------------------------------------------"
+        "\n--------------------------------------------------------"
 
         fs.appendFile("log.txt", logText, function (){});
     });
