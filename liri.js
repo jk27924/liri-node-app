@@ -114,12 +114,14 @@ function getSong () {
 // #3 movie-this _ OMDB
 function getMovie () {
     var movie = actionTwo;
+
     var omdbQueryUrl = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy"
 
     if (!movie) {
-        movie = "Mr. Nobody";
-        // Not Working. Need to work on more.
+        movie = "Mr Nobody";
     }
+
+
 
     axios.get(omdbQueryUrl).then(function(response) {
         console.log(
@@ -164,16 +166,16 @@ function doWhatItSays () {
             return console.log(error);
         }
 
-        console.log(data);
+        console.log("data is: " + data);
 
-        var output = data.split(", ");
+        var output = data.split(",");
 
-        console.log (output);
+        console.log ("Output is: " + output);
 
         action = output[0];
-        process.argv[3] = output[1];
-        console.log(action);
-        console.log(output[1]);
+        actionTwo = output[1];
+        console.log("Action is: " + action);
+        console.log("Action Two is: " + actionTwo);
 
         switchAction();
     });
