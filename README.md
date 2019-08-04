@@ -56,8 +56,8 @@ Searches through the OMDB API for a movie and renders the following information 
 
 **4. node liri.js do-what-it-says:**  Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
 
-1) It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt.
-2) User can also Edit the text in random.txt to test out the feature for movie-this and concert-this as well.
+- It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt.
+- User can also Edit the text in random.txt to test out the feature for movie-this and concert-this as well.
 
 ## Saving Search History
 In addition to logging the data to the terminal/bash window, output the data to a txt file called **log.txt**.
