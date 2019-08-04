@@ -64,3 +64,4 @@ In addition to logging the data to the terminal/bash window, output the data to 
 
 ## Demonstration Video
 To see a YouTube video demonstrating how Liri works, just click on the following link:
+- https://youtu.be/gEMQn_u_C6c
