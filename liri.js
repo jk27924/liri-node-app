@@ -9,7 +9,7 @@ var bandsintown = require("bandsintown")("106ad69002bde46c02cdebb861ad5e84");
 var moment = require("moment");
 var Spotify = require("node-spotify-api");
 var spotify = new Spotify(keys.spotify);
-var OmdbApi = require("omdb-api-pt")
+var OmdbApi = require("omdb-api-pt");
 var fs = require("fs");
 
 // saving user input command
