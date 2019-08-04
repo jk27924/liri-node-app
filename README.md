@@ -12,6 +12,14 @@ Switching cases to run the appropriate function based on the user's command:
 - movie-this
 - do-what-it-says
 
+## Technologies Used
+- Node.js
+- Javascript
+- fs
+- Moment.js
+- Axios
+- API
+- NPM Package
 
 ## Used APIs
 - Bands In Town (http://www.artists.bandsintown.com/bandsintown-api)
